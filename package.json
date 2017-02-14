@@ -1,0 +1,22 @@
+{
+  "name": "usualcomponents",
+  "version": "1.0.0",
+  "description": "usual components base on es6 +  webpack",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irishugit/usualComponents.git"
+  },
+  "author": "irishu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irishugit/usualComponents/issues"
+  },
+  "homepage": "https://github.com/irishugit/usualComponents#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
