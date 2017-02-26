@@ -1,12 +1,13 @@
 <template>
-	<div id="app">
-		<chaos-loading></chaos-loading>
-		{{ meg }}
+	<div id="app" >
+		<chaos-loading ></chaos-loading>
+
+		<div class="block" ></div>
 	</div>
 </template>
 
 <script>
-	import ChaosLoading from './components/loading.vue';
+	import ChaosLoading from './components/chaos-loading.vue';
 
 	export default{
 		name:'app',
@@ -15,13 +16,17 @@
 		},
 		data(){
 			return {
-				meg:'djjdjd'
+				meg:'djjdjd',
 			}
+		},
+		methods:{
+			
 		}
+
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	*{
 		padding: 0;
 		margin: 0;
@@ -30,5 +35,10 @@
 	html,body{
 		width: 100%;
 		height: 100%;
+	}
+	.block{
+		width:100%;
+		height:1200px;
+		background: lightblue;
 	}
 </style>

@@ -8299,15 +8299,15 @@ module.exports = Vue$3;
 
 
 /* styles */
-__webpack_require__(15)
+__webpack_require__(16)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(5),
   /* template */
-  __webpack_require__(13),
+  __webpack_require__(14),
   /* scopeId */
-  null,
+  "data-v-41316afe",
   /* cssModules */
   null
 )
@@ -8337,8 +8337,9 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_loading_vue__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_loading_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_loading_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_chaos_loading_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_chaos_loading_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_chaos_loading_vue__);
+//
 //
 //
 //
@@ -8352,13 +8353,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = {
 	name: 'app',
 	components: {
-		ChaosLoading: __WEBPACK_IMPORTED_MODULE_0__components_loading_vue___default.a
+		ChaosLoading: __WEBPACK_IMPORTED_MODULE_0__components_chaos_loading_vue___default.a
 	},
 	data() {
 		return {
 			meg: 'djjdjd'
 		};
-	}
+	},
+	methods: {}
+
 };
 
 /***/ }),
@@ -8377,16 +8380,40 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = {
 	name: 'chaos-loading',
+	props: {
+		text: {
+			type: String,
+			default: 'CHAOS'
+		},
+		imgUrl: {
+			type: String
+		},
+		type: {
+			type: String,
+			default: 'stroke-trigon'
+		},
+		show: {
+			default: true
+		}
+	},
 	data() {
 		return {
-			text: 'i\'m loading text',
-			url: './src/resource/img/loading.gif'
+			svgShow: this.imgUrl ? false : true
 		};
 	}
+
 };
 
 /***/ }),
@@ -8650,7 +8677,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n* {\n  padding: 0;\n  margin: 0;\n  font-family: \"Microsoft Yahei UI\";\n}\nhtml, body {\n  width: 100%;\n  height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.chaos-loading-component[data-v-2215d9f4] {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  background-color: black;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.chaos-loading-component .chaos-loading-content[data-v-2215d9f4] {\n    width: 35%;\n    height: 25%;\n}\n.chaos-loading-component img[data-v-2215d9f4] {\n    width: 200px;\n    display: block;\n    margin: auto;\n}\n.chaos-loading-component p[data-v-2215d9f4] {\n    text-align: center;\n    font-size: 1em;\n    font-weight: 600;\n    color: white;\n}\n.chaos-loading-component .chaos-loading-svg[data-v-2215d9f4] {\n    margin: 0 auto;\n    display: block;\n}\n.chaos-loading-component .chaos-loading-svg .chaos-trigon path[data-v-2215d9f4] {\n      stroke-dasharray: 800;\n      stroke-dashoffset: 800;\n      stroke-width: 3;\n      fill: none;\n      /*fill: #e5004f;*/\n      animation: stroke-show 3s infinite;\n}\n.chaos-loading-component .chaos-loading-svg .chaos-trigon path[data-v-2215d9f4]:first-child {\n      stroke: #78e290;\n}\n.chaos-loading-component .chaos-loading-svg .chaos-trigon path[data-v-2215d9f4]:last-child {\n      stroke: #f90157;\n      /*#78e290*/\n}\n@keyframes stroke-show {\n0% {\n    stroke-dashoffset: 800;\n}\n50% {\n    stroke-dashoffset: 0;\n}\n  /*\t50%{\n\t\t\tstroke-dashoffset:-100;\n\t\t}*/\n100% {\n    stroke-dashoffset: -800;\n}\n}\n", ""]);
 
 // exports
 
@@ -8664,7 +8691,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.chaos-loading-component[data-v-eaddd5da] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  background-color: white;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.chaos-loading-component .chaos-loading-content[data-v-eaddd5da] {\n    width: 35%;\n    height: 25%;\n}\n.chaos-loading-component img[data-v-eaddd5da] {\n    width: 200px;\n    display: block;\n    margin: auto;\n}\n.chaos-loading-component p[data-v-eaddd5da] {\n    text-align: center;\n    font-size: 1em;\n    font-weight: 600;\n    /*color: white;*/\n}\n", ""]);
+exports.push([module.i, "\n*[data-v-41316afe] {\n  padding: 0;\n  margin: 0;\n  font-family: \"Microsoft Yahei UI\";\n}\nhtml[data-v-41316afe], body[data-v-41316afe] {\n  width: 100%;\n  height: 100%;\n}\n.block[data-v-41316afe] {\n  width: 100%;\n  height: 1200px;\n  background: lightblue;\n}\n", ""]);
 
 // exports
 
@@ -8675,21 +8702,21 @@ exports.push([module.i, "\n.chaos-loading-component[data-v-eaddd5da] {\n  width:
 
 
 /* styles */
-__webpack_require__(16)
+__webpack_require__(15)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(6),
   /* template */
-  __webpack_require__(14),
+  __webpack_require__(13),
   /* scopeId */
-  "data-v-eaddd5da",
+  "data-v-2215d9f4",
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\sigou\\Git\\usualComponents\\src\\components\\loading.vue"
+Component.options.__file = "D:\\sigou\\Git\\usualComponents\\src\\components\\chaos-loading.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] loading.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] chaos-loading.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -8698,9 +8725,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-eaddd5da", Component.options)
+    hotAPI.createRecord("data-v-2215d9f4", Component.options)
   } else {
-    hotAPI.reload("data-v-eaddd5da", Component.options)
+    hotAPI.reload("data-v-2215d9f4", Component.options)
   }
 })()}
 
@@ -8712,17 +8739,38 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return (_vm.show) ? _c('div', {
+    staticClass: "chaos-loading-component"
+  }, [_c('div', {
+    staticClass: "chaos-loading-content"
+  }, [(_vm.svgShow) ? _c('svg', {
+    staticClass: "chaos-loading-svg",
     attrs: {
-      "id": "app"
+      "width": "100",
+      "height": "100",
+      "viewbox": "0 0 50 50"
     }
-  }, [_c('chaos-loading'), _vm._v("\n\t" + _vm._s(_vm.meg) + "\n")], 1)
+  }, [(_vm.type === 'stroke-trigon') ? _c('g', {
+    staticClass: "chaos-trigon"
+  }, [_c('path', {
+    attrs: {
+      "d": "M50,0 L0,80 L100,80 L50,0 Z"
+    }
+  }), _vm._v(" "), _c('path', {
+    attrs: {
+      "d": "M50,20 L0,97 L100,97 L50,20 Z"
+    }
+  })]) : _vm._e()]) : _vm._e(), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": _vm.imgUrl
+    }
+  }), _vm._v(" "), _c('p', [_vm._v(" " + _vm._s(_vm.text))])])]) : _vm._e()
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-41316afe", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-2215d9f4", module.exports)
   }
 }
 
@@ -8732,20 +8780,18 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "chaos-loading-component"
-  }, [_c('div', {
-    staticClass: "chaos-loading-content"
-  }, [_c('img', {
     attrs: {
-      "src": _vm.url
+      "id": "app"
     }
-  }), _vm._v(" "), _c('p', [_vm._v(" " + _vm._s(_vm.text))])])])
+  }, [_c('chaos-loading'), _vm._v(" "), _c('div', {
+    staticClass: "block"
+  })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-eaddd5da", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-41316afe", module.exports)
   }
 }
 
@@ -8760,13 +8806,13 @@ var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("134be316", content, false);
+var update = __webpack_require__(2)("f268a36a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-41316afe\",\"scoped\":false,\"hasInlineConfig\":false}!./../node_modules/sass-loader/lib/loader.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue", function() {
-     var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-41316afe\",\"scoped\":false,\"hasInlineConfig\":false}!./../node_modules/sass-loader/lib/loader.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue");
+   module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-2215d9f4\",\"scoped\":true,\"hasInlineConfig\":false}!./../../node_modules/sass-loader/lib/loader.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./chaos-loading.vue", function() {
+     var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-2215d9f4\",\"scoped\":true,\"hasInlineConfig\":false}!./../../node_modules/sass-loader/lib/loader.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./chaos-loading.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -8786,13 +8832,13 @@ var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("66e7741b", content, false);
+var update = __webpack_require__(2)("f0f2fd3a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-eaddd5da\",\"scoped\":true,\"hasInlineConfig\":false}!./../../node_modules/sass-loader/lib/loader.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./loading.vue", function() {
-     var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-eaddd5da\",\"scoped\":true,\"hasInlineConfig\":false}!./../../node_modules/sass-loader/lib/loader.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./loading.vue");
+   module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-41316afe\",\"scoped\":true,\"hasInlineConfig\":false}!./../node_modules/sass-loader/lib/loader.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue", function() {
+     var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-41316afe\",\"scoped\":true,\"hasInlineConfig\":false}!./../node_modules/sass-loader/lib/loader.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
