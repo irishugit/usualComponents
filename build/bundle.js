@@ -8357,7 +8357,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	},
 	data() {
 		return {
-			meg: 'djjdjd'
+			meg: 'djjdjd',
+			loadingShow: true
 		};
 	},
 	methods: {}
@@ -8370,6 +8371,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8402,7 +8415,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		type: {
 			type: String,
-			default: 'stroke-trigon'
+			default: 'space-trigon'
 		},
 		show: {
 			default: true
@@ -8677,7 +8690,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.chaos-loading-component[data-v-2215d9f4] {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  background-color: black;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.chaos-loading-component .chaos-loading-content[data-v-2215d9f4] {\n    width: 35%;\n    height: 25%;\n}\n.chaos-loading-component img[data-v-2215d9f4] {\n    width: 200px;\n    display: block;\n    margin: auto;\n}\n.chaos-loading-component p[data-v-2215d9f4] {\n    text-align: center;\n    font-size: 1em;\n    font-weight: 600;\n    color: white;\n}\n.chaos-loading-component .chaos-loading-svg[data-v-2215d9f4] {\n    margin: 0 auto;\n    display: block;\n}\n.chaos-loading-component .chaos-loading-svg .chaos-trigon path[data-v-2215d9f4] {\n      stroke-dasharray: 800;\n      stroke-dashoffset: 800;\n      stroke-width: 3;\n      fill: none;\n      /*fill: #e5004f;*/\n      animation: stroke-show 3s infinite;\n}\n.chaos-loading-component .chaos-loading-svg .chaos-trigon path[data-v-2215d9f4]:first-child {\n      stroke: #78e290;\n}\n.chaos-loading-component .chaos-loading-svg .chaos-trigon path[data-v-2215d9f4]:last-child {\n      stroke: #f90157;\n      /*#78e290*/\n}\n@keyframes stroke-show {\n0% {\n    stroke-dashoffset: 800;\n}\n50% {\n    stroke-dashoffset: 0;\n}\n  /*\t50%{\n\t\t\tstroke-dashoffset:-100;\n\t\t}*/\n100% {\n    stroke-dashoffset: -800;\n}\n}\n", ""]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n.chaos-loading-component[data-v-2215d9f4] {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  background-color: black;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  /*线条三角形*/\n  /*空间三角形*/\n}\n.chaos-loading-component .chaos-loading-content[data-v-2215d9f4] {\n    width: 35%;\n    height: 25%;\n}\n.chaos-loading-component img[data-v-2215d9f4] {\n    width: 200px;\n    display: block;\n    margin: auto;\n}\n.chaos-loading-component p[data-v-2215d9f4] {\n    text-align: center;\n    font-size: 1em;\n    font-weight: 600;\n    color: white;\n    margin-top: 10px;\n}\n.chaos-loading-component .chaos-loading-svg[data-v-2215d9f4] {\n    margin: 0 auto;\n    display: block;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4] {\n    stroke-dasharray: 800;\n    stroke-dashoffset: 800;\n    stroke-width: 3;\n    fill: none;\n    /*fill: #e5004f;*/\n    animation: stroke-show 3s infinite;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4]:first-child {\n    stroke: #78e290;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4]:last-child {\n    stroke: #f90157;\n    /*#78e290*/\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4] {\n    stroke-dasharray: 800;\n    stroke-dashoffset: 0;\n    stroke-width: 13;\n    fill: none;\n    animation: stroke-show  infinite;\n    animation-duration: 3s !important;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:first-child, .chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(4) {\n    stroke: #f0e68c;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(2) {\n    /*animation-delay: 1s;*/\n    stroke: #78e290;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(3) {\n    /*animation-delay: 2s;*/\n    stroke: #f90157;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(4) {\n    stroke-width: 4.5;\n    opacity: 0;\n    /*stroke: black;*/\n    animation: hide infinite;\n}\n@keyframes stroke-show {\n0% {\n    stroke-dashoffset: 800;\n}\n50% {\n    stroke-dashoffset: 0;\n}\n  /*\t50%{\n\t\t\tstroke-dashoffset:-100;\n\t\t}*/\n100% {\n    stroke-dashoffset: -800;\n}\n}\n@keyframes hide {\n0%, 5% {\n    opacity: 0;\n}\n11%, 55% {\n    opacity: 1;\n}\n56%, 100% {\n    opacity: 0;\n}\n}\n.slide-enter-active[data-v-2215d9f4], .slide-leave-active[data-v-2215d9f4] {\n  transition: all .3s ease-out;\n}\n.slide-leave-active[data-v-2215d9f4] {\n  transition: all .3s ease-in;\n}\n.slide-enter[data-v-2215d9f4], .slide-leave-active[data-v-2215d9f4] {\n  transform: translateY(100%);\n}\n", ""]);
 
 // exports
 
@@ -8739,32 +8752,54 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return (_vm.show) ? _c('div', {
+  return _c('transition', {
+    attrs: {
+      "name": "slide"
+    }
+  }, [(_vm.show) ? _c('div', {
     staticClass: "chaos-loading-component"
   }, [_c('div', {
     staticClass: "chaos-loading-content"
   }, [(_vm.svgShow) ? _c('svg', {
     staticClass: "chaos-loading-svg",
     attrs: {
-      "width": "100",
-      "height": "100",
-      "viewbox": "0 0 50 50"
+      "width": "90%",
+      "height": "90%",
+      "viewBox": "0 0 100 100"
     }
   }, [(_vm.type === 'stroke-trigon') ? _c('g', {
-    staticClass: "chaos-trigon"
+    staticClass: "chaos-stroke-trigon"
   }, [_c('path', {
     attrs: {
-      "d": "M50,0 L0,80 L100,80 L50,0 Z"
+      "d": "M50,0 L0,80 L100,80 Z"
     }
   }), _vm._v(" "), _c('path', {
     attrs: {
-      "d": "M50,20 L0,97 L100,97 L50,20 Z"
+      "d": "M50,20 L0,97 L100,97 Z"
     }
-  })]) : _vm._e()]) : _vm._e(), _vm._v(" "), _c('img', {
+  })]) : _vm._e(), _vm._v(" "), (_vm.type === 'space-trigon') ? _c('g', {
+    staticClass: "chaos-space-trigon"
+  }, [_c('path', {
+    attrs: {
+      "d": "M0,94 L78.2,94 L50,39"
+    }
+  }), _vm._v(" "), _c('path', {
+    attrs: {
+      "d": "M94.5,97 L55.8,22 L27.1,77.5"
+    }
+  }), _vm._v(" "), _c('path', {
+    attrs: {
+      "d": "M50,4.8 L10.5,81 L67.5,81"
+    }
+  }), _vm._v(" "), _c('path', {
+    attrs: {
+      "d": "M62.7,73 L67.8,83 L69,75 z"
+    }
+  })]) : _vm._e()]) : _vm._e(), _vm._v(" "), (!_vm.svgShow) ? _c('img', {
     attrs: {
       "src": _vm.imgUrl
     }
-  }), _vm._v(" "), _c('p', [_vm._v(" " + _vm._s(_vm.text))])])]) : _vm._e()
+  }) : _vm._e(), _vm._v(" "), _c('p', [_vm._v(" " + _vm._s(_vm.text))])])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -8782,8 +8817,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     attrs: {
       "id": "app"
+    },
+    on: {
+      "click": function($event) {
+        _vm.loadingShow = !_vm.loadingShow
+      }
     }
-  }, [_c('chaos-loading'), _vm._v(" "), _c('div', {
+  }, [_c('chaos-loading', {
+    attrs: {
+      "type": "space-trigon",
+      "show": _vm.loadingShow
+    }
+  }), _vm._v(" "), _c('div', {
     staticClass: "block"
   })], 1)
 },staticRenderFns: []}

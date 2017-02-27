@@ -1,6 +1,6 @@
 <template>
-	<div id="app" >
-		<chaos-loading ></chaos-loading>
+	<div id="app" v-on:click="loadingShow = !loadingShow ">
+		<chaos-loading type="space-trigon" :show="loadingShow"></chaos-loading>
 
 		<div class="block" ></div>
 	</div>
@@ -17,6 +17,7 @@
 		data(){
 			return {
 				meg:'djjdjd',
+				loadingShow:true
 			}
 		},
 		methods:{
