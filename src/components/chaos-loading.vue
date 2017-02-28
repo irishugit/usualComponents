@@ -29,7 +29,8 @@
 </template>
 
 <script>
-	
+	import  { Browser,$ } from '../js/fundamental.js';
+
 	export default {
 		name:'chaos-loading',
 		props:{
@@ -43,23 +44,52 @@
 			},
 			type:{
 				type:String,
-				default:'space-trigon'
+				default:'stroke-trigon'
 			},
 			show:{
+				type:Boolean,
 				default:true
 			}
 		},
 		data(){
 			return {
-				svgShow: this.imgUrl ? false : true
+				svgShow: this.imgUrl ? false : true,
+				offset: 800 
 			}
 		},
+		mounted(){
+
+			if (Browser.indexOf('ie') > -1) {
+
+				$('g>path').forEach(function(el){
+
+					offset(el);
+				})
+			}
+
+		},
+		methods:{
+			// ie svg不支持css动画，使用js改变
+			offset(el){
+				if (this.offset < -800) {
+					this.offset = 800;
+				}
+				el.style.strokeDashoffset = obj.num;
+				this.offset--;
+
+				requestAnimationFrame(this.offset);
+			}
+		}
 
 	}
 
 </script>
 
 <style lang = "scss" scoped>
+	$roseRed: #f90157;
+	$grassGreen: #78e290;
+	$lightYellow: #f0e68c;
+
 	.chaos-loading-component{
 		width: 100%;
 		height: 100%;
@@ -97,40 +127,40 @@
 
 		/*线条三角形*/
 		.chaos-stroke-trigon path{
-			stroke-dasharray: 800;
-			stroke-dashoffset:800;
+			stroke-dasharray: 800px;
+			stroke-dashoffset:800px;
 			stroke-width:3;
 			fill: none;
 			/*fill: #e5004f;*/
 			animation: stroke-show 3s infinite;
 		}
 		.chaos-stroke-trigon path:first-child{
-			stroke: #78e290;
+			stroke: $grassGreen;
 		}
 		.chaos-stroke-trigon path:last-child{
-			stroke: #f90157;
+			stroke: $roseRed;
 			 /*#78e290*/
 		}
 		
 		/*空间三角形*/
 		.chaos-space-trigon path{
-			stroke-dasharray: 800;
+			stroke-dasharray: 800px;
 			stroke-dashoffset:0;
 			stroke-width:13;
 			fill: none;
 			animation: stroke-show  infinite;
-			animation-duration: 3s !important;
+			animation-duration: 4s !important;
 		}
 		.chaos-space-trigon path:first-child,.chaos-space-trigon path:nth-child(4){
-			stroke: #f0e68c ;
+			stroke: $lightYellow ;
 		}
 		.chaos-space-trigon path:nth-child(2){
 			/*animation-delay: 1s;*/
-			stroke: #78e290;
+			stroke: $grassGreen;
 		}
 		.chaos-space-trigon path:nth-child(3){
 			/*animation-delay: 2s;*/
-			stroke:  #f90157;
+			stroke:  $roseRed;
 		}
 		.chaos-space-trigon path:nth-child(4){
 
@@ -142,16 +172,16 @@
 
 		@keyframes stroke-show{
 			0%{
-				stroke-dashoffset:800;
+				stroke-dashoffset:800px;
 			}
-			50%{
-				stroke-dashoffset:0;
+			45%,60%{
+				stroke-dashoffset:0px;
 			}
 		/*	50%{
 				stroke-dashoffset:-100;
 			}*/
 			100%{
-				stroke-dashoffset:-800;
+				stroke-dashoffset:-800px;
 			}
 		}
 
@@ -159,17 +189,17 @@
 			0%,5%{
 				opacity: 0;
 			}
-			11%,55%{
+			10%,64%{
 				opacity: 1;
 			}
-			56%,100%{
+			66%,100%{
 				opacity: 0;
 			}
 		}
 
 	}
 
-	.slide-enter-active,.slide-leave-active {
+	.slide-enter-active {
 	  transition: all .3s ease-out;
 	}
 	.slide-leave-active {
