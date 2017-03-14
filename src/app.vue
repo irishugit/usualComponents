@@ -1,6 +1,6 @@
 <template>
 	<div id="app" v-on:click="loadingShow = !loadingShow ">
-		<chaos-loading type="stroke-trigon" :show="loadingShow"></chaos-loading>
+		<chaos-loading type="line" :show="loadingShow"></chaos-loading>
 
 		<div class="block" ></div>
 	</div>

@@ -17,8 +17,14 @@
 						<path d="M62.7,73 L67.8,83 L69,75 z"></path>
 
 					</g>
+
+					<g v-if="type === 'line'" class="chaos-loading-line">
+						<path d="M-100 50 L200 50"></path>
+					</g>
 					
 				</svg>
+
+				<!-- <div class="chaos-loading-line" v-if="type === 'line'"></div> -->
 
 				<img v-if="!svgShow" :src = "imgUrl" />
 				<p> {{ text }}</p>
@@ -44,7 +50,7 @@
 			},
 			type:{
 				type:String,
-				default:'stroke-trigon'
+				default:'line'
 			},
 			show:{
 				type:Boolean,
@@ -125,12 +131,14 @@
 			display: block;
 		}
 
-		/*线条三角形*/
-		.chaos-stroke-trigon path{
+		.chaos-loading-svg path{
 			stroke-dasharray: 800px;
-			stroke-dashoffset:800px;
+			stroke-dashoffset:0px;
 			stroke-width:3;
 			fill: none;
+		}
+		/*线条三角形*/
+		.chaos-stroke-trigon path{
 			/*fill: #e5004f;*/
 			animation: stroke-show 3s infinite;
 		}
@@ -144,11 +152,8 @@
 		
 		/*空间三角形*/
 		.chaos-space-trigon path{
-			stroke-dasharray: 800px;
-			stroke-dashoffset:0;
 			stroke-width:13;
-			fill: none;
-			animation: stroke-show  infinite;
+			animation: stroke-show infinite;
 			animation-duration: 4s !important;
 		}
 		.chaos-space-trigon path:first-child,.chaos-space-trigon path:nth-child(4){
@@ -186,7 +191,7 @@
 		}
 
 		@keyframes hide{
-			0%,5%{
+			0%,4%{
 				opacity: 0;
 			}
 			10%,64%{
@@ -207,5 +212,28 @@
 	}
 	.slide-enter, .slide-leave-active {
 	  transform: translateY(100%);
+	}
+
+	.chaos-loading-line path{
+		stroke-width:1.5 !important;
+		stroke: $roseRed;
+		animation:lineLoading 3s infinite ease-in-out;
+	}
+	@keyframes lineLoading{
+		0%{
+			stroke-dashoffset:800px;
+		}
+/*		25%{
+			stroke-dashoffset:0px;
+		}*/
+		50%{
+			stroke-dashoffset:-300px;
+		}
+/*		75%{
+			stroke-dashoffset:-0px;
+		}*/
+		100%{
+			stroke-dashoffset:800px;
+		}
 	}
 </style>

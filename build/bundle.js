@@ -3978,6 +3978,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3993,7 +3999,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		type: {
 			type: String,
-			default: 'stroke-trigon'
+			default: 'line'
 		},
 		show: {
 			type: Boolean,
@@ -8191,7 +8197,7 @@ exports = module.exports = __webpack_require__(114)();
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n.chaos-loading-component[data-v-2215d9f4] {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  background-color: black;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  /*线条三角形*/\n  /*空间三角形*/\n}\n.chaos-loading-component .chaos-loading-content[data-v-2215d9f4] {\n    width: 35%;\n    height: 25%;\n}\n.chaos-loading-component img[data-v-2215d9f4] {\n    width: 200px;\n    display: block;\n    margin: auto;\n}\n.chaos-loading-component p[data-v-2215d9f4] {\n    text-align: center;\n    font-size: 1em;\n    font-weight: 600;\n    color: white;\n    margin-top: 10px;\n}\n.chaos-loading-component .chaos-loading-svg[data-v-2215d9f4] {\n    margin: 0 auto;\n    display: block;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4] {\n    stroke-dasharray: 800px;\n    stroke-dashoffset: 800px;\n    stroke-width: 3;\n    fill: none;\n    /*fill: #e5004f;*/\n    animation: stroke-show 3s infinite;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4]:first-child {\n    stroke: #78e290;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4]:last-child {\n    stroke: #f90157;\n    /*#78e290*/\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4] {\n    stroke-dasharray: 800px;\n    stroke-dashoffset: 0;\n    stroke-width: 13;\n    fill: none;\n    animation: stroke-show  infinite;\n    animation-duration: 4s !important;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:first-child, .chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(4) {\n    stroke: #f0e68c;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(2) {\n    /*animation-delay: 1s;*/\n    stroke: #78e290;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(3) {\n    /*animation-delay: 2s;*/\n    stroke: #f90157;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(4) {\n    stroke-width: 4.5;\n    opacity: 0;\n    /*stroke: black;*/\n    animation: hide infinite;\n}\n@keyframes stroke-show {\n0% {\n    stroke-dashoffset: 800px;\n}\n45%, 60% {\n    stroke-dashoffset: 0px;\n}\n  /*\t50%{\n\t\t\tstroke-dashoffset:-100;\n\t\t}*/\n100% {\n    stroke-dashoffset: -800px;\n}\n}\n@keyframes hide {\n0%, 5% {\n    opacity: 0;\n}\n10%, 64% {\n    opacity: 1;\n}\n66%, 100% {\n    opacity: 0;\n}\n}\n.slide-enter-active[data-v-2215d9f4] {\n  transition: all .3s ease-out;\n}\n.slide-leave-active[data-v-2215d9f4] {\n  transition: all .3s ease-in;\n}\n.slide-enter[data-v-2215d9f4], .slide-leave-active[data-v-2215d9f4] {\n  transform: translateY(100%);\n}\n", ""]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n.chaos-loading-component[data-v-2215d9f4] {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  background-color: black;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  /*线条三角形*/\n  /*空间三角形*/\n}\n.chaos-loading-component .chaos-loading-content[data-v-2215d9f4] {\n    width: 35%;\n    height: 25%;\n}\n.chaos-loading-component img[data-v-2215d9f4] {\n    width: 200px;\n    display: block;\n    margin: auto;\n}\n.chaos-loading-component p[data-v-2215d9f4] {\n    text-align: center;\n    font-size: 1em;\n    font-weight: 600;\n    color: white;\n    margin-top: 10px;\n}\n.chaos-loading-component .chaos-loading-svg[data-v-2215d9f4] {\n    margin: 0 auto;\n    display: block;\n}\n.chaos-loading-component .chaos-loading-svg path[data-v-2215d9f4] {\n    stroke-dasharray: 800px;\n    stroke-dashoffset: 0px;\n    stroke-width: 3;\n    fill: none;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4] {\n    /*fill: #e5004f;*/\n    animation: stroke-show 3s infinite;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4]:first-child {\n    stroke: #78e290;\n}\n.chaos-loading-component .chaos-stroke-trigon path[data-v-2215d9f4]:last-child {\n    stroke: #f90157;\n    /*#78e290*/\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4] {\n    stroke-width: 13;\n    animation: stroke-show infinite;\n    animation-duration: 4s !important;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:first-child, .chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(4) {\n    stroke: #f0e68c;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(2) {\n    /*animation-delay: 1s;*/\n    stroke: #78e290;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(3) {\n    /*animation-delay: 2s;*/\n    stroke: #f90157;\n}\n.chaos-loading-component .chaos-space-trigon path[data-v-2215d9f4]:nth-child(4) {\n    stroke-width: 4.5;\n    opacity: 0;\n    /*stroke: black;*/\n    animation: hide infinite;\n}\n@keyframes stroke-show {\n0% {\n    stroke-dashoffset: 800px;\n}\n45%, 60% {\n    stroke-dashoffset: 0px;\n}\n  /*\t50%{\n\t\t\t\tstroke-dashoffset:-100;\n\t\t\t}*/\n100% {\n    stroke-dashoffset: -800px;\n}\n}\n@keyframes hide {\n0%, 4% {\n    opacity: 0;\n}\n10%, 64% {\n    opacity: 1;\n}\n66%, 100% {\n    opacity: 0;\n}\n}\n.slide-enter-active[data-v-2215d9f4] {\n  transition: all .3s ease-out;\n}\n.slide-leave-active[data-v-2215d9f4] {\n  transition: all .3s ease-in;\n}\n.slide-enter[data-v-2215d9f4], .slide-leave-active[data-v-2215d9f4] {\n  transform: translateY(100%);\n}\n.chaos-loading-line path[data-v-2215d9f4] {\n  stroke-width: 1.5 !important;\n  stroke: #f90157;\n  animation: lineLoading 3s infinite ease-in-out;\n}\n@keyframes lineLoading {\n0% {\n    stroke-dashoffset: 800px;\n}\n  /*\t\t25%{\n\t\t\tstroke-dashoffset:0px;\n\t\t}*/\n50% {\n    stroke-dashoffset: -300px;\n}\n  /*\t\t75%{\n\t\t\tstroke-dashoffset:-0px;\n\t\t}*/\n100% {\n    stroke-dashoffset: 800px;\n}\n}\n", ""]);
 
 // exports
 
@@ -9024,6 +9030,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "d": "M62.7,73 L67.8,83 L69,75 z"
     }
+  })]) : _vm._e(), _vm._v(" "), (_vm.type === 'line') ? _c('g', {
+    staticClass: "chaos-loading-line"
+  }, [_c('path', {
+    attrs: {
+      "d": "M-100 50 L200 50"
+    }
   })]) : _vm._e()]) : _vm._e(), _vm._v(" "), (!_vm.svgShow) ? _c('img', {
     attrs: {
       "src": _vm.imgUrl
@@ -9054,7 +9066,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('chaos-loading', {
     attrs: {
-      "type": "stroke-trigon",
+      "type": "line",
       "show": _vm.loadingShow
     }
   }), _vm._v(" "), _c('div', {
